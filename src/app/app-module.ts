@@ -3,14 +3,40 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Skills } from './skills/skills';
+import { Projects } from './projects/projects';
+import { Contact } from './contact/contact';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { DatePipe, TitleCasePipe } from '@angular/common';
+import { MatList, MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Home,
+    About,
+    Skills,
+    Projects,
+    Contact
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatButtonModule,
+    MatCardModule,
+    DatePipe,
+    TitleCasePipe,
+    MatListModule
+   
+    
+    
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

@@ -1,0 +1,46 @@
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.img img{
+    border-radius: 50px;
+}
+
+.myimg{
+
+    animation: my 4s ease-in-out;
+}
+
+.icons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+
+h1{
+    animation: fadeIn 4s ease-in forwards;
+}
+
+@keyframes my {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

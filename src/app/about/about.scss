@@ -1,0 +1,72 @@
+.about-card {
+  max-width: auto;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ebe6e6;
+  color: #f80404;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: about 4s ease-in forwards;
+
+  mat-card-header {
+    border-bottom: 2px solid #00ff88;
+    margin-bottom: 15px;
+
+    mat-card-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #00ff88;
+    }
+
+    mat-card-subtitle {
+      font-size: 1.2rem;
+      color: #fd0303;
+    }
+  }
+
+  mat-card-content {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #00ff88;
+    }
+
+    .education-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 12px 0;
+        padding: 12px;
+        border-left: 3px solid #00ff88;
+        background: #2a2a2a;
+        border-radius: 6px;
+
+        strong {
+          color: #fff;
+        }
+
+        .highlight {
+          color: #00ff88;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@keyframes about {
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
+}

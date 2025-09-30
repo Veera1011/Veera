@@ -1,0 +1,47 @@
+<mat-card class="contact-card">
+  <mat-card-header>
+    <mat-card-title>Contact Me</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <div class="contact-item">
+      <mat-icon>email</mat-icon>
+      <div class="info-text">
+        <h3>Email</h3>
+        <p>{{email}}</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <mat-icon>phone</mat-icon>
+      <div class="info-text">
+        <h3>Phone</h3>
+        <p>{{phone}}</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <mat-icon>location_on</mat-icon>
+      <div class="info-text">
+        <h3>Location</h3>
+        <p>{{location}}</p>
+      </div>
+    </div>
+
+    <div class="connect">
+      <p>Connect with me</p>
+      <div class="social-icons">
+        <a href="{{github}}" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="{{linkedin}}" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+         <a href="{{resume}}" target="_blank">
+          <i class="fas fa-file-lines"></i>
+
+        </a>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

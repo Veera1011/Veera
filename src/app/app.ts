@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,13 @@ import { Component, signal } from '@angular/core';
   standalone: false,
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('Veera-Portfolio');
+export class App implements OnInit {
+  protected readonly title = signal('veera');
+
+   date=new Date();
+
+  ngOnInit(): void {
+      console.log(this.date);
+  }
+  
 }

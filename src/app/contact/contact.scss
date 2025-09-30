@@ -1,0 +1,142 @@
+.contact-card {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  animation: contactFade 1.5s ease-in forwards;
+
+  mat-card-header {
+    border-bottom: 3px solid #26ff00;
+    margin-bottom: 25px;
+
+    mat-card-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #00ff11;
+      text-align: center;
+    }
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 18px;
+    border-left: 4px solid #00ff08;
+    background: #1c1c1c;
+    border-radius: 8px;
+
+    mat-icon {
+      color: #f80404;
+      font-size: 1.5rem;
+      margin-right: 25px;
+      flex-shrink: 0;
+    }
+
+    .info-text {
+      h3 {
+        margin: 0;
+        font-size: 1.7rem;
+        color: #00ff1a;
+      }
+
+      p {
+        margin: 5px 0 0;
+        font-size: 1.4rem;
+        color: #d1e8ff;
+      }
+    }
+  }
+
+  .connect {
+    margin-top: 30px;
+    text-align: center;
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #fd0303;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      a {
+        color: #22ff00;
+        font-size: 3rem;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.3);
+          color: #f80404;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    max-width: 95%;
+    padding: 20px;
+
+    mat-card-title {
+      font-size: 1.8rem;
+    }
+
+    .contact-item {
+      flex-direction: column;
+      align-items: flex-start;
+
+      mat-icon {
+        margin-bottom: 5px;
+        font-size: 10px;
+      }
+
+      .info-text h3 {
+        font-size: 1.4rem;
+      }
+
+      .info-text p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .social-icons a {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 15px;
+
+    mat-card-title {
+      font-size: 1.5rem;
+    }
+
+    .contact-item {
+      padding: 12px;
+    }
+  }
+}
+
+@keyframes contactFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

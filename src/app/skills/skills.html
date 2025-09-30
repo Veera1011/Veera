@@ -1,0 +1,8 @@
+<div class="cardiv">
+    <mat-card class="card" *ngFor="let s of skills">
+    <mat-card-header>
+        <mat-card-title [ngStyle]="{'color':'red'}">{{s.tech}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="s.img" alt="skills">
+</mat-card>
+</div>
