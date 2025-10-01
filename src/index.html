@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>VeeraPortfolio</title>
-  <base href="/">
+  <base href="/VeeraPortfolio/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script>
+    // Redirect to index.html with the path as a query parameter
+    sessionStorage.redirect = location.pathname;
+  </script>
+  <meta http-equiv="refresh" content="0;URL='/VeeraPortfolio/'">
 </head>
 <body>
   <app-root></app-root>
