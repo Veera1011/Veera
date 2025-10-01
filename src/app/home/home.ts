@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.scss'
 })
 export class Home {
-
+img:string='assets/Veeramanikandan Elangovan _Photo.jpg'
 }

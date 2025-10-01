@@ -1,36 +1,208 @@
-.cardiv {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 20px;
-}
+.skills-section {
+  padding: 40px 20px;
+  background: #dedfe1; 
+  min-height: 100vh;
 
-.card {
-  margin: 10px;
-  width: 300px;
-  height: 200px;
-  border-radius: 20px;
-  overflow: hidden; 
-  animation: skill 2s  ease-in-out forwards;
-}
-.card img {
-  width: 250px;       
-  height: 120px;      
-  max-width: 100%;     
-  max-height: 100%;    
-  object-fit: contain; 
-  margin: 20px;
-}
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00ff00;
+    margin-bottom: 40px;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    border-bottom: 3px solid #00ff00;
+    display: inline-block;
+    padding-bottom: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
+  .cardiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 280px;
+    height: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #1a1a1a;
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    animation: skill 1s ease-in-out forwards;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #00ff00, #ff0000);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 8px 30px rgba(0, 255, 0, 0.4);
+      border-color: #00ff00;
+      background: #000000;
+
+      &::before {
+        transform: scaleX(1);
+      }
+
+      mat-card-title {
+        color: #00ff00;
+        text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+      }
+
+      .img-container {
+        transform: scale(1.1);
+      }
+    }
+
+    mat-card-header {
+      padding: 15px 20px 10px;
+      width: 100%;
+      text-align: center;
+
+      mat-card-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #ff0000;
+        margin: 0;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    .img-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
 
 @keyframes skill {
-
-  from{
+  from {
     opacity: 0;
+    transform: translateY(30px);
   }
-
   to {
-    opacity: 2;
+    opacity: 1;
+    transform: translateY(0);
   }
-  
+}
+
+// Responsive design
+@media screen and (max-width: 1024px) {
+  .skills-section {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .cardiv {
+      gap: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section {
+    padding: 30px 15px;
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+
+    .cardiv {
+      gap: 20px;
+    }
+
+    .card {
+      width: 250px;
+      height: 200px;
+
+      mat-card-header mat-card-title {
+        font-size: 1.2rem;
+      }
+
+      .img-container img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-section {
+    padding: 20px 10px;
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    .cardiv {
+      gap: 15px;
+    }
+
+    .card {
+      width: 220px;
+      height: 180px;
+
+      mat-card-header {
+        padding: 12px 15px 8px;
+
+        mat-card-title {
+          font-size: 1.1rem;
+        }
+      }
+
+      .img-container {
+        padding: 15px;
+
+        img {
+          width: 80px;
+          height: 80px;
+          padding: 12px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-5px) scale(1.01);
+      }
+    }
+  }
 }

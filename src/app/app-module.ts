@@ -14,6 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { DatePipe, TitleCasePipe } from '@angular/common';
 import { MatList, MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,9 @@ import { MatList, MatListModule } from '@angular/material/list';
     MatCardModule,
     DatePipe,
     TitleCasePipe,
-    MatListModule
-   
+    MatListModule,
+   MatSidenavModule,
+   MatToolbarModule
     
     
   ],

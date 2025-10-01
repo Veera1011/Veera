@@ -1,38 +1,126 @@
 .about-card {
-  max-width: auto;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  background: #ebe6e6;
-  color: #f80404;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  animation: about 4s ease-in forwards;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 2px solid #00ff00;
+  animation: about 1s ease-in forwards;
 
   mat-card-header {
-    border-bottom: 2px solid #00ff88;
-    margin-bottom: 15px;
+    border-bottom: 3px solid #00ff00;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
 
     mat-card-title {
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: bold;
-      color: #00ff88;
+      color: #00ff00;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     }
 
     mat-card-subtitle {
-      font-size: 1.2rem;
-      color: #fd0303;
+      font-size: 1.3rem;
+      color: #ff0000;
+      margin-top: 8px;
     }
   }
 
   mat-card-content {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #ffffff;
+
+    p {
+      margin-bottom: 15px;
+
+      b {
+        color: #00ff00;
+        font-weight: 600;
+      }
+    }
 
     h3 {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      font-size: 1.3rem;
-      color: #00ff88;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #00ff00;
+      border-bottom: 3px solid #00ff00;
+      padding-bottom: 10px;
+      display: inline-block;
+      text-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+    }
+
+    .experience-list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 25px 0;
+        padding: 20px;
+        border-left: 5px solid #00ff00;
+        background: #000000;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+        border: 1px solid #333;
+
+        &:hover {
+          transform: translateX(10px);
+          box-shadow: 0 8px 24px rgba(0, 255, 0, 0.4);
+          border-left-width: 7px;
+          background: #0a0a0a;
+        }
+
+        .experience-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+
+          strong {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+          }
+
+          .duration {
+            background: #00ff00;
+            color: #000000;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+          }
+        }
+
+        .company {
+          color: #ff0000;
+          font-weight: 600;
+          margin-bottom: 12px;
+          font-size: 1.05rem;
+        }
+
+        .description {
+          color: #cccccc;
+          line-height: 1.7;
+          margin: 0;
+          font-size: 1rem;
+        }
+
+        .highlight {
+          color: #00ff00;
+          font-weight: 700;
+          background: rgba(0, 255, 0, 0.1);
+          padding: 2px 8px;
+          border-radius: 4px;
+          border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+      }
     }
 
     .education-list {
@@ -40,19 +128,37 @@
       padding: 0;
 
       li {
-        margin: 12px 0;
-        padding: 12px;
-        border-left: 3px solid #00ff88;
-        background: #2a2a2a;
-        border-radius: 6px;
+        margin: 18px 0;
+        padding: 18px;
+        border-left: 4px solid #ff0000;
+        background: #000000;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+        border: 1px solid #333;
+
+        &:hover {
+          transform: translateX(10px);
+          box-shadow: 0 8px 24px rgba(255, 0, 0, 0.4);
+          border-left-width: 6px;
+          background: #0a0a0a;
+        }
 
         strong {
-          color: #fff;
+          color: #ffffff;
+          font-size: 1.1rem;
+          font-weight: 600;
         }
 
         .highlight {
-          color: #00ff88;
-          font-weight: bold;
+          color: #ff0000;
+          font-weight: 700;
+          background: rgba(255, 0, 0, 0.1);
+          padding: 3px 10px;
+          border-radius: 4px;
+          display: inline-block;
+          margin-top: 5px;
+          border: 1px solid rgba(255, 0, 0, 0.3);
         }
       }
     }
@@ -60,13 +166,100 @@
 }
 
 @keyframes about {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    from{
-        opacity: 0;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive design
+@media screen and (max-width: 768px) {
+  .about-card {
+    margin: 15px;
+    padding: 20px;
+
+    mat-card-header {
+      mat-card-title {
+        font-size: 1.6rem;
+      }
+
+      mat-card-subtitle {
+        font-size: 1.1rem;
+      }
     }
 
-    to{
-        opacity: 1;
+    mat-card-content {
+      font-size: 1rem;
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      .experience-list li {
+        padding: 15px;
+
+        .experience-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+
+          strong {
+            font-size: 1.1rem;
+          }
+
+          .duration {
+            font-size: 0.85rem;
+            padding: 5px 14px;
+          }
+        }
+
+        .company {
+          font-size: 1rem;
+        }
+
+        .description {
+          font-size: 0.95rem;
+        }
+      }
+
+      .education-list li {
+        padding: 15px;
+
+        strong {
+          font-size: 1rem;
+        }
+      }
     }
-    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-card {
+    margin: 10px;
+    padding: 15px;
+
+    mat-card-header {
+      mat-card-title {
+        font-size: 1.4rem;
+      }
+
+      mat-card-subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    mat-card-content {
+      .experience-list li,
+      .education-list li {
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
 }

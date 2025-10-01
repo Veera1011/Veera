@@ -1,30 +1,60 @@
-<nav class="nav">
+<mat-sidenav-container class="sidenav-container">
+  <!-- Side Nav -->
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+    <button mat-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="sidenav.close()">
+      <mat-icon>home</mat-icon> Home
+    </button>
+    <button mat-button routerLink="about" routerLinkActive="active" (click)="sidenav.close()">
+      <mat-icon>contact_page</mat-icon> About
+    </button>
+    <button mat-button routerLink="skills" routerLinkActive="active" (click)="sidenav.close()">
+      <mat-icon>engineering</mat-icon> Skills
+    </button>
+    <button mat-button routerLink="projects" routerLinkActive="active" (click)="sidenav.close()">
+      <mat-icon>work</mat-icon> Projects
+    </button>
+    <button mat-button routerLink="contacts" routerLinkActive="active" (click)="sidenav.close()">
+      <mat-icon>call</mat-icon> Contact
+    </button>
+  </mat-sidenav>
   
-  <button class="person">
-<mat-icon fontIcon="person"></mat-icon>
-  </button>
-   
-  <h1>{{title() | titlecase}}</h1>
-  <p>{{date | date:'fullDate'}}</p>
-  <button class="button" mat-icon-button routerLink="">
-    <mat-icon matTooltip="Home">home</mat-icon>
-  </button>
-
-  <button class="button" mat-icon-button routerLink="about">
-    <mat-icon matTooltip="About">contact_page</mat-icon>
-  </button>
-
-  <button class="button" mat-icon-button routerLink="skills">
-    <mat-icon matTooltip="Skills">engineering</mat-icon>
-  </button>
-
-  <button class="button" mat-icon-button routerLink="projects">
-    <mat-icon matTooltip="Projects">work</mat-icon>
-  </button>
-
-  <button class="button" mat-icon-button routerLink="contacts">
-    <mat-icon matTooltip="Contact">call</mat-icon>
-  </button>
-</nav>
-
-<router-outlet></router-outlet>
+  <!-- Main content -->
+  <mat-sidenav-content>
+    <nav class="nav">
+      <!-- Hamburger menu for mobile -->
+      <button class="menu-btn" mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <!-- Profile icon -->
+      <button class="person" mat-icon-button>
+        <mat-icon>person</mat-icon>
+      </button>
+      
+      <!-- Title and date -->
+      <h1>{{ title() | titlecase }}</h1>
+      <p>{{ date | date:'fullDate' }}</p>
+      
+      <!-- Desktop nav buttons -->
+      <div class="desktop-nav">
+        <button class="button" mat-icon-button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon matTooltip="Home">home</mat-icon>
+        </button>
+        <button class="button" mat-icon-button routerLink="about" routerLinkActive="active">
+          <mat-icon matTooltip="About">contact_page</mat-icon>
+        </button>
+        <button class="button" mat-icon-button routerLink="skills" routerLinkActive="active">
+          <mat-icon matTooltip="Skills">engineering</mat-icon>
+        </button>
+        <button class="button" mat-icon-button routerLink="projects" routerLinkActive="active">
+          <mat-icon matTooltip="Projects">work</mat-icon>
+        </button>
+        <button class="button" mat-icon-button routerLink="contacts" routerLinkActive="active">
+          <mat-icon matTooltip="Contact">call</mat-icon>
+        </button>
+      </div>
+    </nav>
+    
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

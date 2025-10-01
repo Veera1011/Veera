@@ -1,8 +1,13 @@
-<div class="cardiv">
+<div class="skills-section">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="cardiv">
     <mat-card class="card" *ngFor="let s of skills">
-    <mat-card-header>
-        <mat-card-title [ngStyle]="{'color':'red'}">{{s.tech}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="s.img" alt="skills">
-</mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ s.tech }}</mat-card-title>
+      </mat-card-header>
+      <div class="img-container">
+        <img mat-card-image [src]="s.img" alt="{{ s.tech }}">
+      </div>
+    </mat-card>
+  </div>
 </div>

@@ -42,8 +42,8 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
   /* Gradient radiant background */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(80, 58, 33, 0.9)),
-              url('https://picsum.photos/1200/800?blur=10'); // Optional background image
+  // background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(80, 58, 33, 0.9)),
+  //             url('https://picsum.photos/1200/800?blur=10'); // Optional background image
   background-size: cover;
   background-position: center;
 
@@ -66,3 +66,5 @@ body {
     transform: scale(1);
   }
 }
+
+

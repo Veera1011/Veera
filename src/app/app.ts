@@ -7,7 +7,7 @@ import { Component, OnInit, signal } from '@angular/core';
   styleUrl: './app.scss'
 })
 export class App implements OnInit {
-  protected readonly title = signal('veera');
+  protected readonly title = signal('Hi, I’m Veeramanikandan');
 
    date=new Date();
 
